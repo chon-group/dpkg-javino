@@ -1,0 +1,14 @@
+Package: javino
+Version: 1.4.05
+Priority:
+Architecture: all
+Essential:
+Depends: openjdk-8-jre | openjdk-11-jre | openjdk-17-jre
+Pre-depends: python3.9 | python3.10, python3-pip
+Suggests:
+Installed-Size:
+Maintainer: chon@grupo.cefet-rj.br
+Conflicts:
+Replaces:
+Provides:
+Description: A library to supports a robotic-agent platform that uses Raspberry+Arduino boards and Jason Framework. Dependencies are Python3 and Pyserial.

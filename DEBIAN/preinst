@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Javino downloading the Pyserial. A network connection is needed!"
+pip3 install pyserial

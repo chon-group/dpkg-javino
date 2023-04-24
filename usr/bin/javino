@@ -1,0 +1,9 @@
+#! /bin/bash
+
+if [ "$1" = "--help" ]
+then
+	man javino
+    exit 0
+else
+    /usr/bin/java -jar /opt/javino/javino.jar $1 $2 $3
+fi
