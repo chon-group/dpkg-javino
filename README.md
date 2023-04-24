@@ -13,26 +13,21 @@ A library to supports a robotic-agent platform that uses Raspberry+Arduino board
 
 + command -- send a command to Arduino, without wait answer
 
-[PORT]
+[PORT] - Set communication serial port.
 
-+ Set communication serial port, example: 	 
-        /dev/ttyACM0
-
-[MSG] 
-
-+   Message for Arduino-side, example: 	 
-        "Hello Arduino!"
+[MSG] - Message for Arduino-side.
 
 ## EXAMPLE
-+ javino command /dev/ttyACMO ledOn
+Sending <ledOn> command to the ATMEGA microcontroller to run at the actuator.
+```console
+root@machine:~# javino command /dev/ttyACMO ledOn
+```
 
-    Sends <ledOn> command to the ATMEGA microcontroller to run at the actuator.
-
-+ javino request /dev/ttyACM0 getPercepts
-
-    Sends a request <getPercept> to the ATMEGA microcontroller to gather perceptions of the sensors.
+Sends a request <getPercept> to the ATMEGA microcontroller to gather perceptions of the sensors.
+```console
+root@machine:~# javino request /dev/ttyACM0 getPercepts
+```
 
 ## COPYRIGHT
-
 N. M. Lazarin e C. E. Pantoja, “A robotic-agent platform for embedding software agents using raspberry pi and arduino boards”, in Proceedings of 9th Software Agents, Environments and Applications School (WESAAC 2015), Niteroi: UFF, 2015, p. 13–20. [Online]. Available at: https://www.researchgate.net/publication/277403727_A_Robotic-agent_Platform_for_Embedding_Software_Agents_Using_Raspberry_Pi_and_Arduino_Boards
 
