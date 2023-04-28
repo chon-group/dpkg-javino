@@ -7,7 +7,7 @@ A double-side library to support serial communication between low-level language
 
 [TYPE] 
 
-+ listen  -- waits an answer from Arduino
++ listen  -- waits for an answer from Arduino
 
 + request -- sends a request to Arduino and waits for an answer 
 
