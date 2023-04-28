@@ -1,29 +1,29 @@
 # javino - Javino (http://javino.sf.net)
 
 ## DESCRIPTION
-A library to supports a robotic-agent platform that uses Raspberry+Arduino boards and Jason Framework.
+A double-side library to support serial communication between low-level languages and Java language. It uses Raspberry+Arduino boards and Jason Framework.
 
     javino [TYPE] [PORT] [MSG]
 
 [TYPE] 
 
-+ listen  -- wait an answer from Arduino
++ listen  -- waits an answer from Arduino
 
-+ request -- send a request to Arduino, wait answer 
++ request -- sends a request to Arduino and waits for an answer 
 
-+ command -- send a command to Arduino, without wait answer
++ command -- sends a command to Arduino but does not wait for an answer
 
-[PORT] - Set communication serial port.
+[PORT] - Sets the communication serial port.
 
-[MSG] - Message for Arduino-side.
+[MSG] - The Message for the Arduino-side.
 
 ## EXAMPLE
-Sending <ledOn> command to the ATMEGA microcontroller to run at the actuator.
+Sending the <ledOn> command to the ATMEGA microcontroller to activate an actuator.
 ```console
 root@machine:~# javino command /dev/ttyACMO ledOn
 ```
 
-Sends a request <getPercept> to the ATMEGA microcontroller to gather perceptions of the sensors.
+Sends a request <getPercept> to the ATMEGA microcontroller to gather perceptions from sensors.
 ```console
 root@machine:~# javino request /dev/ttyACM0 getPercepts
 ```
