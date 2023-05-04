@@ -1,9 +1,9 @@
 #! /bin/bash
 
-if [ "$1" = "--help" ]
+if [ "$1" = "send" ] | [ "$1" = "request" ] | [ "$1" = "listen" ] |  [ "$1" = "command" ]
 then
-	man javino
-    exit 0
+        /usr/bin/python3 /opt/javino/javino.py $1 $2 $3
 else
-    /usr/bin/java -jar /opt/javino/javino.jar $1 $2 $3
+   	man javino
+    exit 0
 fi
