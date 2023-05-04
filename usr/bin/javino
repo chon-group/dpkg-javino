@@ -1,9 +1,10 @@
 #! /bin/bash
 
-if [ "$1" = "send" ] | [ "$1" = "request" ] | [ "$1" = "listen" ] |  [ "$1" = "command" ]
-then
-        /usr/bin/python3 /opt/javino/javino.py $1 $2 $3
-else
-   	man javino
-    exit 0
-fi
+case "$1" in
+  send|command|listen|request)
+    /usr/bin/python3 /opt/javino/javino.py $1 $2 $3
+    ;;
+  *)
+    man javino
+    ;;
+esac
