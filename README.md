@@ -3,7 +3,8 @@
 ## DESCRIPTION
 A double-side library to support serial communication between low-level languages and Java language. It uses Raspberry+Arduino boards and Jason Framework.
 
-    javino [TYPE] [PORT] [MSG]
+    javino [PORT]
+        javino@[PORT]$ [TYPE] [MSG]
 
 [TYPE] 
 
@@ -20,12 +21,19 @@ A double-side library to support serial communication between low-level language
 ## EXAMPLE
 Sending the <ledOn> command to the ATMEGA microcontroller to activate an actuator.
 ```console
-root@machine:~# javino command /dev/ttyACMO ledOn
+user@machine:~$ javino /dev/ttyACM0 
+[JAVINO] Using version stable 1.6.0 (jSerialComm)
+javino@ttyACM0$ command ledOn
+javino@ttyACM0$ exit
 ```
 
 Sends a request <getPercept> to the ATMEGA microcontroller to gather perceptions from sensors.
 ```console
-root@machine:~# javino request /dev/ttyACM0 getPercepts
+user@machine:~$ javino /dev/ttyACM0 
+[JAVINO] Using version stable 1.6.0 (jSerialComm)
+javino@ttyACM0$ request getPercepts
+resourceName(myArduino);ledStatus(off);port(ttyACM0,on);
+javino@ttyACM0$ exit
 ```
 
 ## COPYRIGHT
