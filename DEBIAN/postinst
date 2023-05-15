@@ -1,0 +1,3 @@
+#!/bin/bash
+gzip -f /usr/local/man/man1/javino.1
+mandb

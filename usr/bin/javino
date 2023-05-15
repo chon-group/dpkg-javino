@@ -1,10 +1,8 @@
 #! /bin/bash
 
-case "$1" in
-  send|command|listen|request)
-    /usr/bin/python3 /opt/javino/javino.py $1 $2 $3
-    ;;
-  *)
-    man javino
-    ;;
-esac
+if [ "$1" != "" ]
+then
+  /usr/bin/java -jar /opt/javino/javino-project.jar $1
+else
+  man javino
+fi
