@@ -1,41 +1,60 @@
-# javino - Javino (http://javino.sf.net)
 
-## DESCRIPTION
-A double-side library to support serial communication between low-level languages and Java language. It uses Raspberry+Arduino boards and Jason Framework.
+# Javino APT package
 
-    javino [PORT]
-        javino@[PORT]$ [TYPE] [MSG]
+|![chonide](javinoWithArduinoBoard.png)|
+|:--:|
+|Meta package for Debian, Ubuntu, Mint, and derivatives that provides the [Javino](https://github.com/chon-group/Javino), a message's error check protocol for communication over a serial channel. This repository provides the Javino-CLI (Command Line Interface) for High level side.|
 
-[TYPE] 
 
-+ listen  -- waits for an answer from Arduino
+Others Javino options:
+|                             |High Level|Low Level|
+|----------------------------:|:--------:|:-------:|
+|__For programming languages__|||
+|_C_|-|[javinoCLibrary](https://github.com/bptfreitas/JavinoCLibrary)|
+|_Java_|[Javino](https://github.com/chon-group/Javino)|-|
+|_Python_|-|[javino2Python](https://github.com/chon-group/javino2python)|
+|__Libraries for IoT Boards__|-|-|
+|_Arduino_|-|[javino2Arduino](https://github.com/chon-group/javino2arduino)|
+|__Applications__|||
+|_Linux Command Line Interface_|This Repository|-|
 
-+ request -- sends a request to Arduino and waits for an answer 
 
-+ command -- sends a command to Arduino but does not wait for an answer
 
-[PORT] - Sets the communication serial port.
+## How to install?
 
-[MSG] - The Message for the Arduino-side.
+In a terminal, execute the steps described below:
 
-## EXAMPLE
-Sending the <ledOn> command to the ATMEGA microcontroller to activate an actuator.
 ```console
-user@machine:~$ javino /dev/ttyACM0 
-[JAVINO] Using version stable 1.6.0 (jSerialComm)
-javino@ttyACM0$ command ledOn
-javino@ttyACM0$ exit
-```
-
-Sends a request <getPercept> to the ATMEGA microcontroller to gather perceptions from sensors.
-```console
-user@machine:~$ javino /dev/ttyACM0 
-[JAVINO] Using version stable 1.6.0 (jSerialComm)
-javino@ttyACM0$ request getPercepts
-resourceName(myArduino);ledStatus(off);port(ttyACM0,on);
-javino@ttyACM0$ exit
+echo "deb [trusted=yes] http://packages.chon.group/ chonos main" | sudo tee /etc/apt/sources.list.d/chonos.list
+sudo apt update
+sudo apt install javino
 ```
 
 ## COPYRIGHT
-N. M. Lazarin e C. E. Pantoja, “A robotic-agent platform for embedding software agents using raspberry pi and arduino boards”, in Proceedings of 9th Software Agents, Environments and Applications School (WESAAC 2015), Niteroi: UFF, 2015, p. 13–20. [Online]. Available at: https://www.researchgate.net/publication/277403727_A_Robotic-agent_Platform_for_Embedding_Software_Agents_Using_Raspberry_Pi_and_Arduino_Boards
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Javino is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The licensor cannot revoke these freedoms as long as you follow the license terms:
 
+* __Attribution__ — You must give __appropriate credit__ like below:
+
+N. M. Lazarin e C. E. Pantoja, “A robotic-agent platform for embedding software agents using raspberry pi and arduino boards”, _in_ __Proceedings of 9th Software Agents, Environments and Applications School (WESAAC 2015)__, Niteroi: UFF, 2015, p. 13–20. Available at: [http://www2.ic.uff.br/~wesaac2015/Proceedings-WESAAC-2015.pdf](https://www.researchgate.net/publication/277403727_A_Robotic-agent_Platform_for_Embedding_Software_Agents_Using_Raspberry_Pi_and_Arduino_Boards)
+
+<details>
+<summary> Bibtex citation format</summary>
+
+```
+@inproceedings{chonOS,
+ author = {Nilson Lazarin and Carlos Pantoja and José Viterbo},
+ title = { Towards a Toolkit for Teaching AI Supported by Robotic-agents: Proposal and First Impressions},
+ booktitle = {Anais do XXXI Workshop sobre Educação em Computação},
+ location = {João Pessoa/PB},
+ year = {2023},
+ keywords = {},
+ issn = {2595-6175},
+ pages = {20--29},
+ publisher = {SBC},
+ address = {Porto Alegre, RS, Brasil},
+ doi = {10.5753/wei.2023.229753},
+ url = {https://sol.sbc.org.br/index.php/wei/article/view/24887}
+}
+
+```
+</details>

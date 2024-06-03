@@ -1,10 +1,10 @@
 Package: javino
-Version: 1.6.4
+Version: 1.6.4-240603
 Priority:
 Architecture: all
 Essential:
 Depends: 
-Pre-depends: openjdk-8-jre | temurin-8-jre | openjdk-11-jre | openjdk-17-jre, man-db
+Pre-depends: openjdk-17-jre
 Suggests:
 Installed-Size:
 Maintainer: chon@grupo.cefet-rj.br
