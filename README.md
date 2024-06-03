@@ -1,7 +1,7 @@
 
 # Javino APT package
 
-|![chonide](javinoWithArduinoBoard.png)|
+|![javinoWithArduinoBoard](https://github.com/chon-group/dpkg-javino/assets/32855001/60041231-2a59-425e-97f1-f7cbe37f4b3b)|
 |:--:|
 |Meta package for Debian, Ubuntu, Mint, and derivatives that provides the [Javino](https://github.com/chon-group/Javino), a message's error check protocol for communication over a serial channel. This repository provides the Javino-CLI (Command Line Interface) for High level side.|
 
