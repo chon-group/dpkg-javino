@@ -6,7 +6,7 @@
 |Meta package for Debian, Ubuntu, Mint, and derivatives that provides the [Javino](https://github.com/chon-group/Javino), a message's error check protocol for communication over a serial channel. This repository provides the Javino-CLI (Command Line Interface) for High level side.|
 
 
-Others Javino options:
+## Others Javino options:
 |                             |High Level|Low Level|
 |----------------------------:|:--------:|:-------:|
 |__For programming languages__|||
@@ -16,9 +16,20 @@ Others Javino options:
 |__Libraries for IoT Boards__|-|-|
 |_Arduino_|-|[javino2Arduino](https://github.com/chon-group/javino2arduino)|
 |__Applications__|||
-|_Linux Command Line Interface_|This Repository|-|
+|_Linux Command Line Interface_|___This Repository___|-|
 
+There are some libraries that use the serial port to deal with one-sided messages. However, these libraries just provide message treatment for one platform side, leaving the other side to the programmer.
+The Javino aims to fill this gap because it offers a double-sided communication that provides a higher level of correctness in message exchange.
 
+For this reason, every message is composed of a preamble, a field size and the message content. The preamble is a field composed of four hexadecimal characters that are used to identify the beginning of a message sent by an agent. The field size is composed of two hexadecimal characters that are used to calculate the message extension. Finally, the last field is the message content, up to 255 bytes. The preamble and the field size are used together to avoid errors in the event of a loss of information during the message transmission. For the sake of practice, Javino automatically mounts the message.
+
+![Javino Message Format](https://a.fsdn.com/con/app/proj/javino/screenshots/The-Javino-message-format-ccb5d9ee.png)
+
+When a message is sent, the Javino library starts to listen on the serial port for arriving char-to-char messages. If there is any information arriving, the Javino stores this character, analyzing if it is part of the expected preamble. So, this process is repeated until the message has been completely received. 
+
+Once the preamble is not confirmed, the Javino discards all information received until it finds a valid preamble. Otherwise, the Javino verifies the field size value to identify the message length. 
+This process avoids error insertions and defines where a message starts
+and ends. 
 
 ## How to install?
 
