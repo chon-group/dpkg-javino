@@ -1,3 +1,8 @@
+|_Javino Libraries and Applications_|![](https://github.com/chon-group/Javino/wiki/.imgs/linux.png)|![](https://github.com/chon-group/Javino/wiki/.imgs/java.png)|![](https://github.com/chon-group/Javino/wiki/.imgs/c.png)|![](https://github.com/chon-group/Javino/wiki/.imgs/python.png)|![](https://github.com/chon-group/Javino/wiki/.imgs/arduino.png)|
+|------|:----:|:----:|:----:|:----:|:----:|
+|__High Level__|[dpkg-javino](https://github.com/chon-group/dpkg-javino)|[Javino](https://github.com/chon-group/Javino)|-|--|--|
+|__Low Level__|-|-|[javinoCLibrary](https://github.com/bptfreitas/JavinoCLibrary)|[javino2Python](https://github.com/chon-group/javino2python)|[javino2Arduino](https://github.com/chon-group/javino2arduino)|
+---
 
 # Javino _Command Line Interface_ for Linux
 
@@ -5,18 +10,6 @@
 |:--:|
 |APT package for Debian, Ubuntu, Mint, and derivatives that provides the [Javino](https://github.com/chon-group/Javino), a message's error check protocol for communication over a serial channel. This repository provides the Javino-CLI (Command Line Interface) for High level side.|
 
-
-## Others Javino options:
-|                             |High Level|Low Level|
-|----------------------------:|:--------:|:-------:|
-|__For programming languages__|||
-|_C_|-|[javinoCLibrary](https://github.com/bptfreitas/JavinoCLibrary)|
-|_Java_|[Javino](https://github.com/chon-group/Javino)|-|
-|_Python_|-|[javino2Python](https://github.com/chon-group/javino2python)|
-|__Libraries for IoT Boards__|-|-|
-|_Arduino_|-|[javino2Arduino](https://github.com/chon-group/javino2arduino)|
-|__Applications__|||
-|_Linux Command Line Interface_|___This Repository___|-|
 
 There are some libraries that use the serial port to deal with one-sided messages. However, these libraries just provide message treatment for one platform side, leaving the other side to the programmer.
 The Javino aims to fill this gap because it offers a double-sided communication that provides a higher level of correctness in message exchange.
