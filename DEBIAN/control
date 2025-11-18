@@ -1,10 +1,10 @@
 Package: javino
-Version: 1.6.4-251117
+Version: 1.6.4-251118
 Priority:
 Architecture: all
 Essential:
 Depends: 
-Pre-depends: openjdk-21-jre-headless | openjdk-21-jre | temurin-17-jre | openjdk-17-jre | temurin-21-jre 
+Pre-depends: openjdk-21-jre-headless | openjdk-21-jre | temurin-21-jre | bellsoft-java21-lite | temurin-17-jre | openjdk-17-jre   
 Suggests:
 Installed-Size:
 Maintainer: chon@grupo.cefet-rj.br
